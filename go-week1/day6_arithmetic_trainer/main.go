@@ -58,7 +58,11 @@ func calculate(operation int, a int, b int) int {
 	} else if operation == 3 {
 		return a * b
 	} else if operation == 4 {
-		return a / b
+		if a == 0 || b == 0 {
+			return 0
+		} else {
+			return a / b
+		}
 	}
 	return 0
 }

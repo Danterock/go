@@ -8,7 +8,7 @@ func main() {
 	fmt.Scan(&score)
 	if score < 0 || score > 100 {
 		fmt.Println("Input out of range")
-	} else if score > 0 && score <= 59 {
+	} else if score >= 0 && score <= 59 {
 		fmt.Println(" Grade: 2")
 	} else if score >= 60 && score <= 74 {
 		fmt.Println(" Grade: 3")

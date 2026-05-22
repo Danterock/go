@@ -6,7 +6,13 @@ func main() {
 	var fac int
 	fmt.Printf("Enter number: ")
 	fmt.Scan(&fac)
-	fmt.Printf("Factorial: %v", factorial(fac))
+	if fac < 0 {
+		fmt.Println("Invalid number")
+	} else if fac == 0 {
+		fmt.Println("Factorial: 1")
+	} else {
+		fmt.Printf("Factorial: %v", factorial(fac))
+	}
 }
 
 func factorial(n int) int {

@@ -20,7 +20,6 @@ func sumRange(a, b int) int {
 	} else {
 		for i := 0; i <= b; i++ {
 			if a <= i {
-				fmt.Println(i)
 				n += i
 			}
 		}

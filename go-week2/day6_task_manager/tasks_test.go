@@ -63,3 +63,29 @@ func TestSearchTasks(t *testing.T) {
 		t.Error("а должно быть 1")
 	}
 }
+func TestStartTask(t *testing.T) {
+	tasks := []Task{
+		{1, "A", "high", false},
+		{2, "B", "low", true},
+		{3, "C", "medium", false},
+	}
+	result := getStatistics(tasks)
+	if result["total"] != 3 {
+		t.Error("ожидали 3")
+	}
+	if result["active"] != 2 {
+		t.Error("ожидали 2")
+	}
+	if result["done"] != 1 {
+		t.Error("ожидали 1")
+	}
+	if result["low"] != 1 {
+		t.Error("ожидали 1")
+	}
+	if result["high"] != 1 {
+		t.Error("ожидали 1")
+	}
+	if result["medium"] != 1 {
+		t.Error("ожидали 1")
+	}
+}

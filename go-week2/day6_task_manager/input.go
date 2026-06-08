@@ -18,7 +18,10 @@ func readLine(message string) string {
 func readInt(message string) int {
 	text := readLine(message)
 
-	number, _ := strconv.Atoi(text)
+	number, err := strconv.Atoi(text)
+	if err != nil {
+		return -1
+	}
 
 	return number
 }

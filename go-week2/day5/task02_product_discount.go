@@ -9,7 +9,7 @@ type Product struct {
 }
 
 func (p Product) DiscountedPrice() float64 {
-	if p.Price < 0 || p.Discount < 0 && p.Discount > 100 {
+	if p.Price < 0 || p.Discount < 0 || p.Discount > 100 {
 		fmt.Println("Invalid product")
 		return 0.0
 	}

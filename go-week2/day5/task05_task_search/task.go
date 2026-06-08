@@ -24,6 +24,9 @@ func FindTaskByID(tasks []Task, id int) (Task, bool) {
 	if len(tasks) == 0 {
 		return newTask, false
 	}
+	if tasks[0].ID == id {
+		return newTask, false
+	}
 	for _, task := range tasks {
 		if task.ID == id {
 			newTask = task

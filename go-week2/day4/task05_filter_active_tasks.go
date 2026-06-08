@@ -2,12 +2,6 @@ package main
 
 import "fmt"
 
-type Task struct {
-	ID    int
-	Title string
-	Done  bool
-}
-
 func main() {
 	tasks := []Task{
 		{1, "Learn slices", false},

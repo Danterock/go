@@ -13,10 +13,9 @@ func Average(numbers []int) float64 {
 	}
 	return float64(Sum(numbers)) / float64(len(numbers))
 }
-func MinMax(numbers []int) (min int, max int, ok bool) {
-	min = 1
-	ok = true
-	max = 1
+func MinMax(numbers []int) (int, int, bool) {
+	var min, max int = numbers[0], numbers[0]
+	ok := true
 	if len(numbers) == 0 {
 		return 0, 0, false
 	}

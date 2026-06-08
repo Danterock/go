@@ -23,14 +23,12 @@ func main() {
 }
 func containsIgnoreCase(text string, query string) bool {
 	text = strings.ToLower(text)
-	textO := strings.Fields(text)
 	query = strings.ToLower(query)
-	queryO := strings.Fields(query)
-	for i := 0; i < len(text); i++ {
-		if queryO[0] == textO[i] {
+	text0 := strings.Fields(text)
+	for i := 0; i < len(text0); i++ {
+		if text0[i] == query {
 			return true
 		}
-		return false
 	}
 	return false
 }

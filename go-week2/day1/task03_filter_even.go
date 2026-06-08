@@ -20,7 +20,7 @@ func main() {
 
 func filterEven(numbers []int) []int {
 	var newnumbers []int
-	for i := 0; i < len(numbers)-1; i++ {
+	for i := 0; i < len(numbers); i++ {
 		if numbers[i]%2 == 0 {
 			newnumbers = append(newnumbers, numbers[i])
 		}
